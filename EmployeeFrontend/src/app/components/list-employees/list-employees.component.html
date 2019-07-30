@@ -1,0 +1,22 @@
+<div class="table-section">
+    <table class="table table-hover">
+        <tr>
+            <th>Lp</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Salary</th>
+            <th>Edit</th>
+            <th>Remove</th>
+        </tr>
+
+        <tr *ngFor="let employee of employees; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{employee.FirstName}} </td>
+            <td>{{employee.LastName}} </td>
+            <td>{{employee.Gender}}</td>
+            <td>{{employee.Salary}}</td>
+            <td><i class="fa fa-pencil" aria-hidden="true" (click)="edit(employee)"></i></td>
+            <td><i class="fa fa-minus-square-o" aria-hidden="true" (click)="deleteEmployee(employee)"></i></td>
+    </table>
+</div>

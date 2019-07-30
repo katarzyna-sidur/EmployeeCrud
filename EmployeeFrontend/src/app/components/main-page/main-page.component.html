@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="header">
+        <h1>Employee Register</h1>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Employee Form</h5>
+                <app-from-employee #form (emitEmployee)="saveEmployee($event)"></app-from-employee>
+            </div>
+            <div class="col-md-6">
+                <h5>Employees' list</h5>
+                <app-list-employees #list (editEmployee)="updateForm($event)"></app-list-employees>
+            </div>
+        </div>
+    </div>
+</div>
